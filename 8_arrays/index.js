@@ -80,15 +80,15 @@
 // });
 // console.log(filteredDays);
 
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+// const days = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
 
 //Simple for loop
 // for (let i = 0; i <= days.length - 1; i++) {
@@ -115,8 +115,81 @@ const days = [
 
 //Find
 
-const array1 = [5, 12, 8, 130, 44];
-const found = array1.find((value, i, obj) => {
-  return value > 8;
-});
-console.log(found);
+// const array1 = [5, 12, 8, 130, 44];
+// const found = array1.find((value, i, obj) => {
+//   return value > 8;
+// });
+// console.log(found);
+
+//Index of
+
+// const array1 = [5, 12, 8, 130, 44, 8];
+// const index = array1.indexOf(8, 4);
+// console.log(index);
+
+//Find index
+
+// const array1 = [1, 1, 3, 5, 5, 6];
+// const index = array1.findIndex((value) => {
+//   if (value % 2 == 0) {
+//     return value;
+//   }
+// });
+// console.log(index);
+
+//Concat
+// const array1 = ["Vinal"];
+// const array2 = ["Pawar"];
+// const joinedArray = array1.concat(array2, array1);
+
+// console.log(joinedArray);
+
+//at
+
+// const array1 = [5, 12, 8, 130, 44];
+// let index = 2;
+// console.log(
+//   `Using an index of ${index} the item returned is ${array1.at(index)}`
+// );
+
+//Array checker methods
+
+//EVERY
+
+// const array1 = [1, 30, 39, 29, 10, 13, 31];
+// console.log(
+//   array1.every((value) => {
+//     return value < 40;
+//   })
+// );
+
+//Some
+// const array1 = [55, 50, 5];
+// console.log(
+//   array1.some((value) => {
+//     return value < 40;
+//   })
+// );
+
+//Include
+// const array1 = [1, 30, 39, 29, 10, 13, 31, 10];
+// console.log(array1.includes(10, 5));
+
+//IsArray
+// const array1 = "1, 30, 39, 29, 10, 13, 31, 10";
+// const IsArray = Array.isArray(array1);
+// console.log(IsArray);
+
+//REDUCE
+
+// const array1 = [1, 2, 3, 4];
+// const sum = array1.reduce((previousValue, currentValue) => {
+//   return previousValue * currentValue;
+// }, 1);
+
+// console.log(sum);
+
+const months = ["March", "Jan", "Feb", "Dec"];
+console.log(months.sort());
+const array1 = [1, 30, 4, 21, 100000];
+console.log(array1.sort((a, b) => b - a));
