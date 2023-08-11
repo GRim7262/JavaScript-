@@ -189,7 +189,27 @@
 
 // console.log(sum);
 
-const months = ["March", "Jan", "Feb", "Dec"];
-console.log(months.sort());
-const array1 = [1, 30, 4, 21, 100000];
-console.log(array1.sort((a, b) => b - a));
+//Sort
+// const months = ["March", "Jan", "Feb", "Dec"];
+// console.log(months.sort());
+// const array1 = [1, 30, 4, 21, 100000];
+// console.log(array1.sort((a, b) => b - a));
+
+//Join
+// const elements = ["Fire", "Air", "Water"];
+// console.log(elements.join(","));
+
+// const date = [7, 8, 1999];
+// console.log(date.join("/"));
+
+//Flat
+
+// const arr1 = [0, 1, 2, [3, 4]];
+
+// console.log(arr1.flat());
+// // Expected output: Array [0, 1, 2, 3, 4]
+
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+// console.log(arr2.flat(2));
+// // Expected output: Array [0, 1, 2, Array [3, 4]]
