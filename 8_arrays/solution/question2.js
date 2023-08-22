@@ -24,28 +24,33 @@
 const coins = [10, 6, 5, 2];
 const amountNeedToPay = 69;
 
-const enoughCoins = (coins, amount) => {
-  const moneyArr = coins.map((value, i) => {
-    if (i === 0) {
-      return value;
-    } else if (i === 1) {
-      return value * 2;
-    } else if (i === 2) {
-      return value * 5;
-    } else {
-      return value * 10;
-    }
-  });
-  const totalMoney = moneyArr.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    0
-  );
-  //   console.log("moneyArr", moneyArr);
-  //   console.log("totalMoney", totalMoney);
-  if (totalMoney >= amount) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// const enoughCoins = (coins, amount) => {
+//   const moneyArr = coins.map((value, i) => {
+//     if (i === 0) {
+//       return value;
+//     } else if (i === 1) {
+//       return value * 2;
+//     } else if (i === 2) {
+//       return value * 5;
+//     } else {
+//       return value * 10;
+//     }
+//   });
+//   const totalMoney = moneyArr.reduce(
+//     (previousValue, currentValue) => previousValue + currentValue,
+//     0
+//   );
+//   //   console.log("moneyArr", moneyArr);
+//   //   console.log("totalMoney", totalMoney);
+//   if (totalMoney >= amount) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+function enoughCoins(coins, amount) {
+  return coins[0] + coins[1] * 2 + coins[2] * 5 + coins[3] * 10 >= amount;
+}
+
 console.log(enoughCoins(coins, amountNeedToPay));
