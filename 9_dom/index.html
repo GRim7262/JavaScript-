@@ -7,8 +7,8 @@
   </head>
   <body>
     <!-- This is also a node -->
-    <header>
-      <nav>
+    <header id="nav">
+      <nav class="common">
         <ul>
           <li>Home</li>
           <li>About</li>
@@ -16,14 +16,45 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>This is text</h1>
+    <main class="common">
+      <h1 name="sample">This is text</h1>
+      <h1 name="sample">This is text2</h1>
     </main>
-    <footer>This is footer text</footer>
+    <footer class="common">This is footer text</footer>
     <script>
-      //   console.log(document.body.parentNode);
-      //   console.log(document.body.childNodes);
-      console.log(document.body.firstChild);
+      // How to access nodes in dom
+      // console.log(document.body.parentNode);
+      // console.log(document.body.childNodes);
+      // console.log(document.body.childNodes[3].childNodes[1].childNodes[1]);
+
+      // How to access element nodes
+      // console.log(document.body.children[1].previousElementSibling);
+
+      // How to access element using id
+      // console.log(document.getElementById("nav"));
+      // console.log(document.getElementsByClassName("common"));
+      // console.log(document.getElementsByName("sample")[1]);
+      // console.log(document.getElementsByTagName("footer"));
+
+      // console.log(document.querySelector("#nav"));
+      // console.log(document.querySelector(".common"));
+      // console.log(document.querySelector("footer"));
+      // console.log(document.querySelector('[name="sample"]'));
+      // console.log(document.querySelectorAll('[name="sample"]'));
+
+      // const commonElements = document.querySelectorAll(".common");
+
+      // for (let common of commonElements) {
+      //   console.log(common);
+      // }
+
+      // const convertedCommonElements = Array.from(commonElements);
+
+      // const convertedCommonElements =
+      //   document.querySelectorAll("ul > li:last-child");
+      // console.log(convertedCommonElements[0].innerHTML);
+
+      const attributeValue = document.getElementById("nav").getAttribute("id");
     </script>
   </body>
 </html>
