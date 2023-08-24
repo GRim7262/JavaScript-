@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
+    <style>
+      .active {
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
     <!-- This is also a node -->
-    <header id="nav">
+    <header data-new="coding" id="nav">
       <nav class="common">
         <ul>
-          <li>Home</li>
+          <li class="active demo">Home</li>
           <li>About</li>
           <li>Dashboard</li>
         </ul>
       </nav>
     </header>
     <main class="common">
-      <h1 name="sample">This is text</h1>
-      <h1 name="sample">This is text2</h1>
+      <!-- <h1 name="sample">This is text</h1>
+      <h1 name="sample">This is text2</h1> -->
+      <button id="changeBtn" onclick="alertMe(this)">Color Change</button>
+      <button id="changeBtn">Color Change</button>
     </main>
-    <footer class="common">This is footer text</footer>
+    <!-- <footer class="common">This is footer text</footer> -->
     <script>
       // How to access nodes in dom
+
       // console.log(document.body.parentNode);
       // console.log(document.body.childNodes);
       // console.log(document.body.childNodes[3].childNodes[1].childNodes[1]);
@@ -54,7 +62,81 @@
       //   document.querySelectorAll("ul > li:last-child");
       // console.log(convertedCommonElements[0].innerHTML);
 
-      const attributeValue = document.getElementById("nav").getAttribute("id");
+      // const attributeValue = document
+      //   .getElementById("nav")
+      //   .getAttribute("style");
+      // document.getElementById("nav").setAttribute("data-random", 5);
+      // document.getElementById("nav").removeAttribute("data-random");
+      // console.log(attributeValue);
+      // console.log(document.getElementById("nav").dataset.new);
+
+      // const newFooterText = "This is new text";
+      // const heading = document.createElement("h1");
+      // const text = document.createTextNode("I am base");
+      // const text1 = document.createTextNode("Hi, Guys");
+      // heading.append(text);
+      // heading.prepend(text1);
+      // const footer = document.getElementsByTagName("footer")[0];
+      // footer.append(heading);
+      // footer.before(heading);
+      // footer.after(heading);
+
+      // footer.replaceWith(newFooterText);
+      // document.getElementsByTagName("nav")[0].remove();
+      // console.log(heading);
+
+      // const listItems = document.getElementsByTagName("li");
+
+      // listItems[0].classList.remove("active");
+      // listItems[0].classList.add("active");
+      // listItems[0].classList.toggle("active");
+
+      // console.log(listItems);
+
+      // const manyHtmlCode = `      <nav class="common">
+      //   <ul>
+      //     <li class="active demo">Home</li>
+      //     <li>About</li>
+      //     <li>Dashboard</li>
+      //   </ul>
+      // </nav>`;
+
+      // document.querySelector("footer").innerHTML = manyHtmlCode;
+      // document.querySelector("footer").innerText = manyHtmlCode;
+      // document.querySelector("footer").outerHTML = manyHtmlCode;
+
+      // const alertMe = () => alert("You are doing wrong");
+
+      function alertMe(e) {
+        console.log(e.getAttribute("id"));
+        alert("You are doing wrong");
+      }
+
+      // const changeBtnEl = document.getElementById("changeBtn");
+
+      // const random = (number) => {
+      //   return Math.floor(Math.random() * (number + 1));
+      // };
+
+      // function forChangingColor(event) {
+      //   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //   document.body.style.backgroundColor = rndCol;
+      // }
+
+      // changeBtnEl.addEventListener("click", forChangingColor);
+      // changeBtnEl.removeEventListener("click", forChangingColor);
+
+      // changeBtnEl.addEventListener("click", function forChangingColor(event) {
+      //   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //   document.body.style.backgroundColor = rndCol;
+      // });
+      // changeBtnEl.removeEventListener(
+      //   "click",
+      //   function forChangingColor(event) {
+      //     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      //     document.body.style.backgroundColor = rndCol;
+      //   }
+      // );
     </script>
   </body>
 </html>
