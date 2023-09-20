@@ -22,4 +22,4 @@ const generateTable = (tableValue, times) => {
   }
 };
 const tableNumber = parseInt(prompt("Enter table number: "));
-generateTable(tableNumber, 50);
+generateTable(tableNumber, 10);
