@@ -37,7 +37,7 @@
 //   },
 // };
 
-// Tthis === aadharCardData
+// this === aadharCardData
 // const village = addharCardData.address.village;
 
 // console.log(addharCardData.getFullName());
