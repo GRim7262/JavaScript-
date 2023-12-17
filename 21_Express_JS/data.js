@@ -29,4 +29,4 @@ const phone = [
   },
 ];
 
-module.exports = { phone };
+module.exports = phone;
