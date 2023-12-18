@@ -1,37 +1,41 @@
 const express = require("express");
 const app = express();
-const phone = require("./data");
+app.use(express.json());
+let books = [
+  {
+    id: 1,
+    title: "Book 1",
+    author: "Author 1",
+  },
+  {
+    id: 2,
+    title: "Book 2",
+    author: "Author 2",
+  },
+];
 
-app.get("/", (req, res) => {
-  res.send("<h1>Home</h1> <a href='/api/phone'>Phone</a> ");
+app.get("/books", (req, res) => {
+  res.json(books);
 });
 
-// app.get("/api/phone/:phoneID", (req, res) => {
-//   const { phoneID } = req.params;
-//   console.log(req.params);
-//   const singleProduct = phone.find(
-//     (product) => product.id === parseInt(phoneID)
-//   );
+app.post("/books", (req, res) => {
+  console.log(req.body);
+  const newBooks = req.body;
+  newBooks.id = books.length + 1;
+  books.push(newBooks);
+  res.status(201).json(books);
+});
 
-//   if (!singleProduct) {
-//     res.status(404).send("Product not found");
-//   }
-
-//   res.json(singleProduct);
-// });
-
-app.get("/api/v1/query", (req, res) => {
-  let sortedPhone = [...phone];
-  const { search, limit } = req.query;
-  if (search) {
-    sortedPhone = sortedPhone.filter((product) => {
-      return product.name.toLowerCase().startsWith(search);
-    });
+app.put("/books/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const updatedBooks = req.body;
+  const index = books.findIndex((book) => book.id === id);
+  if (index !== -1) {
+    books[index] = { ...books[index], ...updatedBooks };
+    res.json(books[index]);
+  } else {
+    res.status(404).json({ error: "Book not found" });
   }
-  if (limit) {
-    sortedPhone.length = limit;
-  }
-  res.json(sortedPhone);
 });
 
 app.listen(3000, () => {
