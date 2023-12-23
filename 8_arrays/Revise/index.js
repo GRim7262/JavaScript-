@@ -206,6 +206,37 @@ const originalArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Case 9: Start index and end index
 // are negative and out of range
-const case9 = originalArr.slice(-15, -10);
-console.log(`Case 9: Start index and end index
- are negative and out of range: [${case9}]`);
+// const case9 = originalArr.slice(-15, -10);
+// console.log(`Case 9: Start index and end index
+//  are negative and out of range: [${case9}]`);
+
+// This method checks whether at least one of the elements of the array satisfies the condition checked by the argument function.
+// const isGreaterThan5 = (element, index, array) => {
+//   return element > 5;
+// };
+
+// const func = () => {
+//   let array = [2, 5, 8, 1, 4];
+//   let value = array.some(isGreaterThan5);
+//   console.log(value);
+// };
+// func();
+
+// The array reduce() method in JavaScript is used to reduce the array to a single value and executes a provided function for each value of the array (from left to right) and the return value of the function is stored in an accumulator.
+// let numbers = [88, 50, 25, 10];
+
+// const geeks = (total, num) => {
+//   return total - num;
+// };
+
+// let sub = numbers.reduce(geeks);
+
+// console.log(sub);
+
+// The map() method in JavaScript creates an array by calling a specific function on each element present in the parent array. It is a non-mutating method. Generally, the map() method is used to iterate over an array and call the function on every element of an array.
+let numbers = [4, 9, 16, 25];
+
+const geeks = () => numbers.map(Math.sqrt);
+
+let sub = numbers.map(geeks);
+console.log(sub);
