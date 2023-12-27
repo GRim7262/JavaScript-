@@ -39,16 +39,52 @@
 // document.getElementById("nav").setAttribute("data-random", 5);
 // // document.getElementById("nav").removeAttribute("data-random");
 // console.log(document.getElementById("nav").dataset.new);
-const footerNewText = "This is new text";
-const heading = document.createElement("h1");
-const text = document.createTextNode("I am base");
-const text1 = document.createTextNode("Hi, Guys");
-heading.append(text);
-heading.prepend(text1);
-const footer = document.getElementsByTagName("footer")[0];
+// const footerNewText = "This is new text";
+// const heading = document.createElement("h1");
+// const text = document.createTextNode("I am base");
+// const text1 = document.createTextNode("Hi, Guys");
+// heading.append(text);
+// heading.prepend(text1);
+// const footer = document.getElementsByTagName("footer")[0];
 // footer.append(heading);
 // footer.before(heading);
 // footer.after(heading);
-footer.replaceWith(footerNewText);
-document.getElementsByTagName("nav")[0].remove();
-console.log(heading);
+// footer.replaceWith(footerNewText);
+// document.getElementsByTagName("nav")[0].remove();
+// console.log(heading);
+
+// const listItems = document.getElementsByTagName("li");
+
+// console.log(listItems[0].classList.remove("active"));
+// console.log(listItems[0].classList.add("active"));
+// listItems[0].classList.toggle("active");
+
+// const manyHtmlCode = `<nav class="common">
+// <ul>
+//   <li class="active demo">Home</li>
+//   <li>About</li>
+//   <li>Dashboard</li>
+// </ul>
+// </nav>`;
+// document.querySelector("footer").innerHTML = manyHtmlCode;
+// document.querySelector("footer").innerText = manyHtmlCode;
+// document.querySelector("footer").outerHTML = manyHtmlCode;
+
+// EVENTS
+
+// const alertMe = (e) => {
+//   console.log(e.getAttribute("id"));
+//   alert("You are doing wrong");
+// };
+
+// const changeBtnEl = document.getElementById("changeBtn");
+
+// const random = (number) => Math.floor(Math.random() * (number + 1));
+
+// const forChaingeingColor = (event) => {
+//   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+//   document.body.style.backgroundColor = rndCol;
+// };
+
+// changeBtnEl.addEventListener("click", forChaingeingColor);
+// changeBtnEl.removeEventListener("click", forChaingeingColor);

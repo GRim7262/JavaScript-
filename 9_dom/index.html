@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>DOM</title>
   </head>
   <body>
-    <header data-new="coding" id="nav" style="background-color: red">
+    <header data-new="coding" id="nav">
       <nav class="common">
         <ul>
-          <li>Home</li>
+          <li class="active demo">Home</li>
           <li>About</li>
           <li>Dashboard</li>
         </ul>
       </nav>
     </header>
     <main class="common">
-      <h1 name="sample">This is text1</h1>
-      <h1 name="sample">This is text2</h1>
+      <button onclick="alertMe(this)" id="changeBtn">Color Change</button>
+      <!-- <button id="changeBtn">Color Change</button> -->
+      <!-- <h1 name="sample">This is text1</h1>
+      <h1 name="sample">This is text2</h1> -->
     </main>
-    <footer class="common">This footer text</footer>
+    <!-- <footer class="common">This footer text</footer> -->
     <script src="index.js"></script>
   </body>
 </html>
