@@ -24,21 +24,43 @@
     </style>
   </head>
   <body>
-    <button id="btn" class="on">ON</button>
+    <button class="on" id="btn" onclick="btnFn()">ON</button>
     <script>
-      const btnEl = document.getElementById("btn");
-      function toggleBtn() {
-        if (btnEl.classList[0] === "on") {
-          btnEl.classList.remove("on");
-          btnEl.classList.add("off");
-          btnEl.innerHTML = "OFF";
+      // Initialize a boolean variable to represent the current state (ON or OFF)
+      let isOn = true;
+      // Define a function that will be triggered when the button is clicked
+      const btnFn = () => {
+        // Select the button element from the DOM
+        const button = document.querySelector("button");
+
+        if (isOn) {
+          // If the state is ON, update the button text and class for OFF state
+          button.innerText = "OFF";
+          button.className = "off";
         } else {
-          btnEl.classList.add("on");
-          btnEl.classList.remove("off");
-          btnEl.innerHTML = "ON";
+          // If the state is OFF, update the button text and class for ON state
+          button.innerText = "ON";
+          button.className = "on";
         }
-      }
-      btnEl.addEventListener("click", toggleBtn);
+        // Toggle the state for the next click
+        isOn = !isOn;
+      };
+
+      // YT Approach
+      // const btnEl = document.getElementById("btn");
+      // const toggleBtn = () => {
+      //   if (btnEl.classList[0] === "on") {
+      //     btnEl.classList.remove("on");
+      //     btnEl.classList.add("off");
+      //     btnEl.innerText = "OFF";
+      //   } else {
+      //     btnEl.classList.remove("off");
+      //     btnEl.classList.add("on");
+      //     btnEl.innerText = "ON";
+      //   }
+      // };
+
+      // btnEl.addEventListener("click", toggleBtn);
     </script>
   </body>
 </html>
