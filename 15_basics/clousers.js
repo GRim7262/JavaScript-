@@ -1,8 +1,8 @@
 function sum(a, b) {
-  var sum = a + b;
-  return function () {
-    return a + b + c;
+  let sum = a + b;
+  return function (c) {
+    return sum + c;
   };
 }
 const sumReturnValue = sum(1, 2);
-console.log(sumReturnValue);
+console.log(sumReturnValue(5));
